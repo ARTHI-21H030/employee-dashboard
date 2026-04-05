@@ -1,38 +1,136 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* Background */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+/* Container */
+.container {
+  padding: 20px;
+}
+
+/* Header */
+h1 {
+  text-align: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Card sections */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Inputs */
+input, select {
+  width: 85%;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+input:focus, select:focus {
+  border-color: #667eea;
+}
+
+/* Buttons */
+button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #667eea;
+  color: white;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #5a67d8;
+}
+
+/* Employee grid */
+.employee-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* Employee card */
+.employee-card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.employee-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Department badges */
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: white;
+  margin-top: 5px;
+}
+
+/* Different department colors */
+.badge:nth-of-type(1) {
+  background: #007bff;
+}
+
+.badge.hr {
+  background: #ff6b6b;
+}
+
+.badge.it {
+  background: #4dabf7;
+}
+
+.badge.finance {
+  background: #20c997;
+}
+
+/* Status */
+.status {
+  display: inline-block;
+  padding: 3px 8px;
+  background: #28a745;
+  color: white;
+  border-radius: 5px;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Button group */
+.btn-group {
+  margin-top: 10px;
+}
+
+.btn-group button:first-child {
+  background: #f59f00;
+}
+
+.btn-group button:last-child {
+  background: #e03131;
+}
+
+.btn-group button:first-child:hover {
+  background: #e67700;
+}
+
+.btn-group button:last-child:hover {
+  background: #c92a2a;
 }
